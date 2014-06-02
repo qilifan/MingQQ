@@ -1529,30 +1529,95 @@ public class QQProtocol {
 	private static String calcBuddyListHash(int nQQUin, String strPtWebQq)
 	{
 		try {
+
 			byte[] bytPtWebQq = strPtWebQq.getBytes("UTF-8");
 			
-			byte[] a = {0, 0, 0, 0};
-			for (int s = 0; s < bytPtWebQq.length; s++)
-				a[s%4] ^= bytPtWebQq[s];
+			int[] r = {0, 0, 0, 0};
+			r[0] = nQQUin >> 24 & 255;
+			r[1] = nQQUin >> 16 & 255;
+			r[2] = nQQUin >> 8 & 255;
+			r[3] = nQQUin & 255;
 
-			byte[] j = {'E', 'C', 'O', 'K'};
-			int[] d = {0, 0, 0, 0};
-			d[0] = nQQUin >> 24 & 255 ^ j[0];
-			d[1] = nQQUin >> 16 & 255 ^ j[1];
-			d[2] = nQQUin >> 8 & 255 ^ j[2];
-			d[3] = nQQUin & 255 ^ j[3];
+			int[] j = new int[bytPtWebQq.length];
+			for (int i = 0; i < bytPtWebQq.length; ++i)
+				j[i] = bytPtWebQq[i];
 
-			int[] j2 = {0,0,0,0,0,0,0,0};
-			for (int s = 0; s < j2.length; s++)
-				j2[s] = (s % 2 == 0 ? a[s >> 1] : d[s >> 1]);
-			byte[] a2 = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-			byte[] d2 = new byte[j2.length*2];
-			for (int s = 0; s < j2.length; s++) {
-				d2[s*2] = a2[j2[s]>>4&15];
-				d2[s*2+1] = a2[j2[s]&15];
+			_se_ b = new _se_();
+			b.s = 0;
+			b.e = j.length-1;
+
+			List<_se_> e = new ArrayList<_se_>();
+			e.add(b);
+
+			while (e.size() > 0)
+			{
+				_se_ c = e.get(e.size()-1);
+				e.remove(e.size()-1);
+				if (!(c.s >= c.e || c.s < 0 || c.e >= j.length))
+				{
+					if (c.s + 1 == c.e)
+					{
+						if (j[c.s] > j[c.e])
+						{
+							int l = j[c.s];
+							j[c.s] = j[c.e];
+							j[c.e] = l;
+						}
+					}
+					else
+					{
+						int k = c.e, l = c.s, f = j[c.s];
+						while (c.s < c.e)
+						{
+							while (c.s < c.e && j[c.e] >= f)
+							{
+								c.e--;
+								r[0] = r[0] + 3 & 255;
+							}
+
+							if (c.s < c.e)
+							{
+								j[c.s] = j[c.e];
+								c.s++;
+								r[1] = r[1] * 13 + 43 & 255;
+							}
+
+							while (c.s < c.e && j[c.s] <= f)
+							{
+								c.s++;
+								r[2] = r[2] - 3 & 255;
+							}
+
+							if (c.s < c.e)
+							{
+								j[c.e] = j[c.s];
+								c.e--;
+								r[3] = (r[0] ^ r[1] ^ r[2] ^ r[3] + 1) & 255;
+							}
+						}
+						j[c.s] = f;
+
+						_se_ b1 = new _se_();
+						b1.s = l;
+						b1.e = c.s - 1;
+						e.add(b1);
+
+						_se_ b2 = new _se_();
+						b2.s = c.s + 1;
+						b2.e = k;
+						e.add(b2);
+					}
+				}
 			}
-			
-			return new String(d2, "UTF-8");
+
+			char m[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+			String z = new String();
+			for (int n = 0; n < 4; n++)
+			{
+				z += m[r[n] >> 4 & 15];
+				z += m[r[n] & 15];
+			}
+			return z;
 		} catch (UnsupportedEncodingException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -1562,3 +1627,9 @@ public class QQProtocol {
 	}
 
 }
+
+class _se_
+{
+	int s;
+	int e;
+};
