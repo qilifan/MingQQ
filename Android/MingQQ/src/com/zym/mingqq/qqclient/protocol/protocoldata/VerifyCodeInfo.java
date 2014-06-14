@@ -11,6 +11,7 @@ public class VerifyCodeInfo {
 				
 	public boolean parse(byte[] bytData) {
 		// ptui_checkVC('0','!C4P', '\x00\x00\x00\x00\x32\x87\x00\x6c');
+		// ptui_checkVC('1','7DiMADc6_jzM06uHBKkRiYSvoG4jEiHa','\x00\x00\x00\x00\x32\x87\x00\x6c', '');
 		
 		String strData = null;
 		
@@ -42,7 +43,7 @@ public class VerifyCodeInfo {
 					strTemp2 = strData.substring(nPos1, nPos2);
 
 					nPos1 = nPos2 + "','".length();
-					nPos2 = strData.indexOf("');", nPos1);
+					nPos2 = strData.indexOf("',", nPos1);
 					if (nPos2 != -1)
 						strTemp3 = strData.substring(nPos1, nPos2);
 				}

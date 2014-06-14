@@ -369,7 +369,7 @@ public class QQProtocol {
 	
 		// 获取群列表
 	public static boolean getGroupList(QQHttpClient httpClient, 
-			String strVfWebQq, GroupListResult result) {
+			int nQQUin, String strPtWebQq, String strVfWebQq, GroupListResult result) {
 		try {
 	        String url = "http://s.web2.qq.com/api/get_group_name_list_mask2";
 	        
@@ -383,8 +383,11 @@ public class QQProtocol {
 			httpClient.addHeader("Accept-Language","zh-cn");  
 			httpClient.addHeader("Content-Type","application/x-www-form-urlencoded");
 			
+			String strHash = calcBuddyListHash(nQQUin, strPtWebQq);
+			
 			JSONObject json = new JSONObject();
 			json.put("vfwebqq", strVfWebQq);
+			json.put("hash", strHash);
            
 			NameValuePair pair1 = new BasicNameValuePair("r", json.toString());
 						
@@ -1529,107 +1532,32 @@ public class QQProtocol {
 	private static String calcBuddyListHash(int nQQUin, String strPtWebQq)
 	{
 		try {
-
-			byte[] bytPtWebQq = strPtWebQq.getBytes("UTF-8");
-			
-			int[] r = {0, 0, 0, 0};
-			r[0] = nQQUin >> 24 & 255;
-			r[1] = nQQUin >> 16 & 255;
-			r[2] = nQQUin >> 8 & 255;
-			r[3] = nQQUin & 255;
-
-			int[] j = new int[bytPtWebQq.length];
-			for (int i = 0; i < bytPtWebQq.length; ++i)
-				j[i] = bytPtWebQq[i];
-
-			_se_ b = new _se_();
-			b.s = 0;
-			b.e = j.length-1;
-
-			List<_se_> e = new ArrayList<_se_>();
-			e.add(b);
-
-			while (e.size() > 0)
-			{
-				_se_ c = e.get(e.size()-1);
-				e.remove(e.size()-1);
-				if (!(c.s >= c.e || c.s < 0 || c.e >= j.length))
-				{
-					if (c.s + 1 == c.e)
-					{
-						if (j[c.s] > j[c.e])
-						{
-							int l = j[c.s];
-							j[c.s] = j[c.e];
-							j[c.e] = l;
-						}
-					}
-					else
-					{
-						int k = c.e, l = c.s, f = j[c.s];
-						while (c.s < c.e)
-						{
-							while (c.s < c.e && j[c.e] >= f)
-							{
-								c.e--;
-								r[0] = r[0] + 3 & 255;
-							}
-
-							if (c.s < c.e)
-							{
-								j[c.s] = j[c.e];
-								c.s++;
-								r[1] = r[1] * 13 + 43 & 255;
-							}
-
-							while (c.s < c.e && j[c.s] <= f)
-							{
-								c.s++;
-								r[2] = r[2] - 3 & 255;
-							}
-
-							if (c.s < c.e)
-							{
-								j[c.e] = j[c.s];
-								c.e--;
-								r[3] = (r[0] ^ r[1] ^ r[2] ^ r[3] + 1) & 255;
-							}
-						}
-						j[c.s] = f;
-
-						_se_ b1 = new _se_();
-						b1.s = l;
-						b1.e = c.s - 1;
-						e.add(b1);
-
-						_se_ b2 = new _se_();
-						b2.s = c.s + 1;
-						b2.e = k;
-						e.add(b2);
-					}
-				}
+			String i = strPtWebQq;
+			String b = String.valueOf(nQQUin);
+			String a = i + "password error";
+			StringBuffer s = new StringBuffer();
+			while (s.length() < a.length()) {
+				s.append(b);
+			}
+			String ss = s.substring(0, a.length());
+			byte[] j = new byte[a.length()];
+			for (int d = 0; d < a.length(); d++) {
+				j[d] = (byte) (ss.charAt(d) ^ a.charAt(d));
 			}
 
 			char m[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 			String z = new String();
-			for (int n = 0; n < 4; n++)
+			for (int n = 0; n < j.length; n++)
 			{
-				z += m[r[n] >> 4 & 15];
-				z += m[r[n] & 15];
+				z += m[j[n] >> 4 & 15];
+				z += m[j[n] & 15];
 			}
 			return z;
-		} catch (UnsupportedEncodingException e1) {
+		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
 		return "";
 	}
-
 }
-
-class _se_
-{
-	int s;
-	int e;
-};

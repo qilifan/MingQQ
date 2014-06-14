@@ -245,9 +245,10 @@ public class LoginTask extends HttpTask {
 	// 获取群列表
 	private GroupListResult getGroupList() {
 		GroupListResult result = new GroupListResult();
-		
+
 		boolean bRet = QQProtocol.getGroupList(m_httpClient, 
-			m_QQUser.m_LoginResult2.m_strVfWebQq, result);
+				m_QQUser.m_nQQUin, m_QQUser.m_LoginResult1.m_strPtWebQq, 
+				m_QQUser.m_LoginResult2.m_strVfWebQq, result);
 		if (!bRet || result.m_nRetCode != 0 || m_bCancel)
 			return null;
 
