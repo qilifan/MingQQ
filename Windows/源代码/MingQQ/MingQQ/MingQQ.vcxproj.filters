@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d0b804bf-25d0-4906-bd9a-9241bb9cc1f6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e28c5a02-6ccb-44aa-8d89-1e58fe0f759b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{ab72223e-16f4-4399-a707-ee72a65c2b1c}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="jsoncpp-0.5.0">
+      <UniqueIdentifier>{9db9d00f-7233-413c-9272-f1753ef81675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QQClient">
+      <UniqueIdentifier>{e4a5c794-a95d-4ae1-acdd-23dae64ea60e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkinLib">
+      <UniqueIdentifier>{3eb0bc8f-2d50-4304-a86d-c47a147069b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuddyChatDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuddyInfoDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuddyListCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CascadeWinManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceSelDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FontSelDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GifImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChatDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupInfoDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginAccountList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MingQQ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgTipDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PicBarDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RichEditUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SessChatDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrayIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VerifyCodeDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlDocument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp-0.5.0\json_reader.cpp">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp-0.5.0\json_value.cpp">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp-0.5.0\json_writer.cpp">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\Buffer.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\ChangeStatusTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\GetChatPicTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\GetGroupFaceSigTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\GetHeadPicTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\HttpClient.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\InfoTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\LoginTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\LogoutTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\MD5.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\MessageLogger.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\PollTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\QQClient.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\QQNumTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\QQProtocol.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\QQProtocolData.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\QQSignTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\QQUser.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\RecvMsgTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\SendMsgTask.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="QQClient\ThreadPool.cpp">
+      <Filter>QQClient</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinButton.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinComboBox.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinDialog.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinEdit.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinHyperLink.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinListCtrl.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinManager.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinMenu.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinPictureBox.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinRichEdit.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinScrollBar.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinStatic.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinTabCtrl.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinLib\SkinToolBar.cpp">
+      <Filter>SkinLib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BuddyChatDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BuddyInfoDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BuddyListCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CascadeWinManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMsgDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceSelDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FontSelDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GifImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupChatDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupInfoDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IImageOle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginAccountList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgTipDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PicBarDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RichEditUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SessChatDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrayIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VerifyCodeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlDocument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\autolink.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\config.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\features.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\forwards.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\json.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\json_batchallocator.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\reader.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\value.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp-0.5.0\writer.h">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\Buffer.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\ChangeStatusTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\GetChatPicTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\GetGroupFaceSigTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\GetHeadPicTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\HttpClient.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\InfoTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\LoginTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\LogoutTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\MD5.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\MessageLogger.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\PollTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\QQClient.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\QQNumTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\QQProtocol.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\QQProtocolData.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\QQSignTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\QQUser.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\RecvMsgTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\SendMsgTask.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="QQClient\ThreadPool.h">
+      <Filter>QQClient</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinButton.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinComboBox.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinDialog.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinEdit.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinHyperLink.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinLib.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinListCtrl.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinManager.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinMenu.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinPictureBox.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinRichEdit.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinScrollBar.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinStatic.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinTabCtrl.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinLib\SkinToolBar.h">
+      <Filter>SkinLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\100.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCF_Title16.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCF_Title32.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Group16.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Group32.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MingQQ.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sys.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MingQQ.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsoncpp-0.5.0\json_internalarray.inl">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </None>
+    <None Include="jsoncpp-0.5.0\json_internalmap.inl">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </None>
+    <None Include="jsoncpp-0.5.0\json_valueiterator.inl">
+      <Filter>jsoncpp-0.5.0</Filter>
+    </None>
+  </ItemGroup>
+</Project>

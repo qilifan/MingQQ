@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4FCA0368-040C-4CF9-8E0E-3CD4F6786972}</ProjectGuid>
+    <RootNamespace>MingQQ</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <IncludePath>D:\Program Files %28x86%29\WTL90\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Program Files %28x86%29\WTL90\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)MingQQ.tlb</TypeLibraryName>
+      <HeaderFileName>MingQQ.h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>MingQQ_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>MingQQ_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>IMM32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\Bin\$(ProjectName)_d.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)MingQQ.tlb</TypeLibraryName>
+      <HeaderFileName>MingQQ.h</HeaderFileName>
+      <DllDataFileName />
+      <InterfaceIdentifierFileName>MingQQ_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>MingQQ_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>IMM32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\Bin\$(ProjectName).exe</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="BuddyChatDlg.cpp" />
+    <ClCompile Include="BuddyInfoDlg.cpp" />
+    <ClCompile Include="BuddyListCtrl.cpp" />
+    <ClCompile Include="CascadeWinManager.cpp" />
+    <ClCompile Include="FaceCtrl.cpp" />
+    <ClCompile Include="FaceList.cpp" />
+    <ClCompile Include="FaceSelDlg.cpp" />
+    <ClCompile Include="FontSelDlg.cpp" />
+    <ClCompile Include="GifImage.cpp" />
+    <ClCompile Include="GroupChatDlg.cpp" />
+    <ClCompile Include="GroupInfoDlg.cpp" />
+    <ClCompile Include="ImageEx.cpp" />
+    <ClCompile Include="LoginAccountList.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="MainDlg.cpp" />
+    <ClCompile Include="MingQQ.cpp" />
+    <ClCompile Include="MsgTipDlg.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="PicBarDlg.cpp" />
+    <ClCompile Include="RichEditUtil.cpp" />
+    <ClCompile Include="SessChatDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TrayIcon.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="VerifyCodeDlg.cpp" />
+    <ClCompile Include="XmlDocument.cpp" />
+    <ClCompile Include="jsoncpp-0.5.0\json_reader.cpp" />
+    <ClCompile Include="jsoncpp-0.5.0\json_value.cpp" />
+    <ClCompile Include="jsoncpp-0.5.0\json_writer.cpp" />
+    <ClCompile Include="QQClient\Buffer.cpp" />
+    <ClCompile Include="QQClient\ChangeStatusTask.cpp" />
+    <ClCompile Include="QQClient\GetChatPicTask.cpp" />
+    <ClCompile Include="QQClient\GetGroupFaceSigTask.cpp" />
+    <ClCompile Include="QQClient\GetHeadPicTask.cpp" />
+    <ClCompile Include="QQClient\HttpClient.cpp" />
+    <ClCompile Include="QQClient\InfoTask.cpp" />
+    <ClCompile Include="QQClient\LoginTask.cpp" />
+    <ClCompile Include="QQClient\LogoutTask.cpp" />
+    <ClCompile Include="QQClient\MD5.cpp" />
+    <ClCompile Include="QQClient\MessageLogger.cpp" />
+    <ClCompile Include="QQClient\PollTask.cpp" />
+    <ClCompile Include="QQClient\QQClient.cpp" />
+    <ClCompile Include="QQClient\QQNumTask.cpp" />
+    <ClCompile Include="QQClient\QQProtocol.cpp" />
+    <ClCompile Include="QQClient\QQProtocolData.cpp" />
+    <ClCompile Include="QQClient\QQSignTask.cpp" />
+    <ClCompile Include="QQClient\QQUser.cpp" />
+    <ClCompile Include="QQClient\RecvMsgTask.cpp" />
+    <ClCompile Include="QQClient\SendMsgTask.cpp" />
+    <ClCompile Include="QQClient\ThreadPool.cpp" />
+    <ClCompile Include="SkinLib\SkinButton.cpp" />
+    <ClCompile Include="SkinLib\SkinComboBox.cpp" />
+    <ClCompile Include="SkinLib\SkinDialog.cpp" />
+    <ClCompile Include="SkinLib\SkinEdit.cpp" />
+    <ClCompile Include="SkinLib\SkinHyperLink.cpp" />
+    <ClCompile Include="SkinLib\SkinListCtrl.cpp" />
+    <ClCompile Include="SkinLib\SkinManager.cpp" />
+    <ClCompile Include="SkinLib\SkinMenu.cpp" />
+    <ClCompile Include="SkinLib\SkinPictureBox.cpp" />
+    <ClCompile Include="SkinLib\SkinRichEdit.cpp" />
+    <ClCompile Include="SkinLib\SkinScrollBar.cpp" />
+    <ClCompile Include="SkinLib\SkinStatic.cpp" />
+    <ClCompile Include="SkinLib\SkinTabCtrl.cpp" />
+    <ClCompile Include="SkinLib\SkinToolBar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="BuddyChatDlg.h" />
+    <ClInclude Include="BuddyInfoDlg.h" />
+    <ClInclude Include="BuddyListCtrl.h" />
+    <ClInclude Include="CascadeWinManager.h" />
+    <ClInclude Include="CustomMsgDef.h" />
+    <ClInclude Include="FaceCtrl.h" />
+    <ClInclude Include="FaceList.h" />
+    <ClInclude Include="FaceSelDlg.h" />
+    <ClInclude Include="FontSelDlg.h" />
+    <ClInclude Include="GifImage.h" />
+    <ClInclude Include="GroupChatDlg.h" />
+    <ClInclude Include="GroupInfoDlg.h" />
+    <ClInclude Include="IImageOle.h" />
+    <ClInclude Include="ImageEx.h" />
+    <ClInclude Include="LoginAccountList.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="MainDlg.h" />
+    <ClInclude Include="MsgTipDlg.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="PicBarDlg.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RichEditUtil.h" />
+    <ClInclude Include="SessChatDlg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TrayIcon.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="VerifyCodeDlg.h" />
+    <ClInclude Include="XmlDocument.h" />
+    <ClInclude Include="jsoncpp-0.5.0\autolink.h" />
+    <ClInclude Include="jsoncpp-0.5.0\config.h" />
+    <ClInclude Include="jsoncpp-0.5.0\features.h" />
+    <ClInclude Include="jsoncpp-0.5.0\forwards.h" />
+    <ClInclude Include="jsoncpp-0.5.0\json.h" />
+    <ClInclude Include="jsoncpp-0.5.0\json_batchallocator.h" />
+    <ClInclude Include="jsoncpp-0.5.0\reader.h" />
+    <ClInclude Include="jsoncpp-0.5.0\value.h" />
+    <ClInclude Include="jsoncpp-0.5.0\writer.h" />
+    <ClInclude Include="QQClient\Buffer.h" />
+    <ClInclude Include="QQClient\ChangeStatusTask.h" />
+    <ClInclude Include="QQClient\GetChatPicTask.h" />
+    <ClInclude Include="QQClient\GetGroupFaceSigTask.h" />
+    <ClInclude Include="QQClient\GetHeadPicTask.h" />
+    <ClInclude Include="QQClient\HttpClient.h" />
+    <ClInclude Include="QQClient\InfoTask.h" />
+    <ClInclude Include="QQClient\LoginTask.h" />
+    <ClInclude Include="QQClient\LogoutTask.h" />
+    <ClInclude Include="QQClient\MD5.h" />
+    <ClInclude Include="QQClient\MessageLogger.h" />
+    <ClInclude Include="QQClient\PollTask.h" />
+    <ClInclude Include="QQClient\QQClient.h" />
+    <ClInclude Include="QQClient\QQNumTask.h" />
+    <ClInclude Include="QQClient\QQProtocol.h" />
+    <ClInclude Include="QQClient\QQProtocolData.h" />
+    <ClInclude Include="QQClient\QQSignTask.h" />
+    <ClInclude Include="QQClient\QQUser.h" />
+    <ClInclude Include="QQClient\RecvMsgTask.h" />
+    <ClInclude Include="QQClient\SendMsgTask.h" />
+    <ClInclude Include="QQClient\ThreadPool.h" />
+    <ClInclude Include="SkinLib\SkinButton.h" />
+    <ClInclude Include="SkinLib\SkinComboBox.h" />
+    <ClInclude Include="SkinLib\SkinDialog.h" />
+    <ClInclude Include="SkinLib\SkinEdit.h" />
+    <ClInclude Include="SkinLib\SkinHyperLink.h" />
+    <ClInclude Include="SkinLib\SkinLib.h" />
+    <ClInclude Include="SkinLib\SkinListCtrl.h" />
+    <ClInclude Include="SkinLib\SkinManager.h" />
+    <ClInclude Include="SkinLib\SkinMenu.h" />
+    <ClInclude Include="SkinLib\SkinPictureBox.h" />
+    <ClInclude Include="SkinLib\SkinRichEdit.h" />
+    <ClInclude Include="SkinLib\SkinScrollBar.h" />
+    <ClInclude Include="SkinLib\SkinStatic.h" />
+    <ClInclude Include="SkinLib\SkinTabCtrl.h" />
+    <ClInclude Include="SkinLib\SkinToolBar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\100.ico" />
+    <Image Include="res\BCF_Title16.ico" />
+    <Image Include="res\BCF_Title32.ico" />
+    <Image Include="res\Group16.ico" />
+    <Image Include="res\Group32.ico" />
+    <Image Include="res\MingQQ.ico" />
+    <Image Include="res\sys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MingQQ.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsoncpp-0.5.0\json_internalarray.inl" />
+    <None Include="jsoncpp-0.5.0\json_internalmap.inl" />
+    <None Include="jsoncpp-0.5.0\json_valueiterator.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MingQQ.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
