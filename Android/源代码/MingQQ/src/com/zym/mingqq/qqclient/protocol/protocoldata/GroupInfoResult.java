@@ -135,7 +135,7 @@ public class GroupInfoResult {
 				}				
 			} else {
 				System.out.println("minfo");
-				Utils.writeFile(FileUtils.getSDCardDir() + "mingqqlog.txt", strData.getBytes());
+				//Utils.writeFile(FileUtils.getSDCardDir() + "mingqqlog.txt", strData.getBytes());
 			}
 			
 			json3 = json.optJSONArray("cards");

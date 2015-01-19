@@ -1529,30 +1529,36 @@ public class QQProtocol {
 	}
 	
 	// 计算获取好友列表的hash参数
-	private static String calcBuddyListHash(int nQQUin, String strPtWebQq)
-	{
+	private static String calcBuddyListHash(int nQQUin, String strPtWebQq) {
 		try {
-			String i = strPtWebQq;
-			String b = String.valueOf(nQQUin);
-			String a = i + "password error";
-			StringBuffer s = new StringBuffer();
-			while (s.length() < a.length()) {
-				s.append(b);
-			}
-			String ss = s.substring(0, a.length());
-			byte[] j = new byte[a.length()];
-			for (int d = 0; d < a.length(); d++) {
-				j[d] = (byte) (ss.charAt(d) ^ a.charAt(d));
+			String b = String.valueOf(Utils.getUInt(nQQUin));
+			String j = strPtWebQq;
+			
+			String a = j + "password error";
+			String i = "";
+		    for (; ;) {
+		        if (i.length() <= a.length()) {
+		        	i += b;
+		            if (i.length() == a.length())
+		                break;
+		        } else {
+		            i = i.substring(0, a.length());
+		            break;
+		        }
+		    }
+			
+			byte[] E = new byte[i.length()];
+			for (int c = 0; c < i.length(); c++) {
+				E[c] = (byte) (i.charAt(c) ^ a.charAt(c));
 			}
 
 			char m[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-			String z = new String();
-			for (int n = 0; n < j.length; n++)
-			{
-				z += m[j[n] >> 4 & 15];
-				z += m[j[n] & 15];
+			i = "";
+			for (int c = 0; c < E.length; c++) {
+				i += m[E[c] >> 4 & 15];
+				i += m[E[c] & 15];
 			}
-			return z;
+			return i;
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
